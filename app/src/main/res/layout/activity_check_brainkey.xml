@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_backgroud"
+    tools:context=".uipacakage.CheckBrainkeyActivity">
+
+    <com.nyzc.gdm.currencyratio.View.CustomTitleBar
+        android:id="@+id/custom_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:left_button_image="@mipmap/icon_left"
+        app:show_left_button="true"
+        app:show_right_button="false"
+        app:title_background="@color/white"
+        app:title_text="备份助记词" />
+
+    <TextView
+        android:id="@+id/tv_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_33"
+        android:gravity="center"
+        android:text="请记下你的钱包助记词并保存到安全的地方"
+        android:textColor="#ff444444"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/custom_title" />
+
+    <TextView
+        android:id="@+id/tv_save_reminding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_28"
+        android:layout_marginRight="@dimen/dp_28"
+        android:layout_marginTop="@dimen/dp_10"
+        android:ellipsize="end"
+        android:lineSpacingExtra="@dimen/dp_3"
+        android:lineSpacingMultiplier="1"
+        android:lines="3"
+        android:text="钱包助记词用于恢复钱包资产，拥有助记词即可完全控制钱包资产，请务必妥善保管，丢失助词即丢失钱包资产。币比不存储用户助记词，无法提供找回功能。"
+        android:textColor="#ff444444"
+        android:textSize="11sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_save" />
+
+    <RelativeLayout
+        android:id="@+id/rela_gridview_brainkey"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_165"
+        android:layout_marginLeft="@dimen/dp_28"
+        android:layout_marginRight="@dimen/dp_28"
+        android:layout_marginTop="@dimen/dp_15"
+        android:background="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_save_reminding">
+
+        <GridView
+            android:id="@+id/gridview_brainkey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="@dimen/dp_5"
+            android:numColumns="4"
+            android:padding="@dimen/dp_10"
+            android:scrollbars="none"
+            android:verticalSpacing="@dimen/dp_5">
+
+        </GridView>
+    </RelativeLayout>
+
+    <GridView
+        android:visibility="gone"
+        android:id="@+id/gridview_another_brainkey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_28"
+        android:layout_marginRight="@dimen/dp_28"
+        android:layout_marginTop="@dimen/dp_15"
+        android:horizontalSpacing="@dimen/dp_5"
+        android:numColumns="4"
+        android:padding="@dimen/dp_10"
+        android:scrollbars="none"
+        android:verticalSpacing="@dimen/dp_5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rela_gridview_brainkey">
+
+    </GridView>
+
+    <TextView
+        android:id="@+id/tv_brainkey"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_63"
+        android:layout_marginTop="@dimen/dp_30"
+        android:background="@mipmap/icon_shadow_wallet"
+        android:gravity="center"
+        android:text="下一步"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridview_another_brainkey" />
+</android.support.constraint.ConstraintLayout>

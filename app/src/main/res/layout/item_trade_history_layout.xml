@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_41"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_trade_user"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="参与用户" />
+
+        <TextView
+            android:id="@+id/tv_trade_select"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="交易选择" />
+
+        <TextView
+            android:id="@+id/tv_trade_num"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="参与代币量" />
+
+        <TextView
+            android:id="@+id/tv_send_prize"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="派奖" />
+    </LinearLayout>
+</LinearLayout>

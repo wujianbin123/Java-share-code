@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_backgroud">
+
+
+    <com.nyzc.gdm.currencyratio.View.CustomTitleBar
+        android:id="@+id/custom_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:show_left_button="false"
+        app:show_right_button="false"
+        app:title_background="@color/white"
+        app:title_text="账户" />
+
+    <RelativeLayout
+        android:id="@+id/rela_account"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_93"
+        android:background="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/custom_title">
+
+        <TextView
+            android:id="@+id/tv_asset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dp_13"
+            android:paddingTop="@dimen/dp_13"
+            android:text="总资产（¥）"
+            android:textColor="#ff444444"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_asset_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_asset"
+            android:paddingLeft="@dimen/dp_13"
+            android:paddingTop="@dimen/dp_13"
+            android:text="5359.46"
+            android:textColor="#ff444444"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:id="@+id/iv_add_currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_30"
+            android:src="@mipmap/icon_add_account" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rela_account"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+    </android.support.v7.widget.RecyclerView>
+</android.support.constraint.ConstraintLayout>

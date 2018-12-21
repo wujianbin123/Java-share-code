@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_backgroud"
+    android:orientation="vertical"
+    tools:context=".accountPacakage.RechargeActivity">
+
+    <com.nyzc.gdm.currencyratio.View.CustomTitleBar
+        android:id="@+id/custom_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:left_button_image="@mipmap/icon_left"
+        app:show_left_button="true"
+        app:title_background="@color/white"
+        app:title_text="充值" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:text="账号里的代币如何获得？"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="1、支持Erc-20 SEER的交易所或钱包：​"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_10"
+                android:lineSpacingMultiplier="1.3"
+                android:text="将您在交易所或以太钱包的SEER自动兑换至主网（币比）钱包。系统已自动为您的账号分配了一个ETH地址。将交易所或以太钱包中的SEER代币转入该地址，Seer主网（币比）帐号即可自动获得等额SEER，第一次建议小额转账先试一下。
+​" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="ETH地址:"
+                android:textColor="#000000" />
+
+            <TextView
+                android:textSize="@dimen/sp_12"
+                android:paddingLeft="@dimen/dp_5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:text="0x917570b753253969ea1E2c260242c6fbcf2e3138" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="2、BTS资产GDEX.SEER："
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_10"
+                android:lineSpacingMultiplier="1.3"
+                android:text="将 BTS 内盘的 GDEX.SEER 转账至 seer.gateway（数字 ID#1.2.974186）转账 memo 备注填：“seer#主网帐号”（双引号不需要填写），即可完成主网 SEER 自动发放，第一次建议小额转账先试一下。
+​" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="3、第三方兑换"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="请联系官方认证到第三方承兑商,仅支持Dapp内转账" />
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_5"
+                    android:src="@mipmap/wx" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:gravity="center_vertical"
+                    android:text="微信: hongshaorouwanzi​"
+                    android:textColor="#000000" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

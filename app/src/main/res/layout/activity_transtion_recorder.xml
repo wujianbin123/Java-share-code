@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_backgroud"
+    android:orientation="vertical"
+    tools:context=".accountPacakage.TranstionRecorderActivity">
+
+    <com.nyzc.gdm.currencyratio.View.CustomTitleBar
+        android:id="@+id/custom_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        app:left_button_image="@mipmap/icon_left"
+        app:show_left_button="true"
+        app:show_right_button="false"
+        app:title_background="@color/white"
+        app:title_text="SEER" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rela_trains"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_93"
+                android:background="@color/white"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/transferaccounts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/rechargeeaccount"
+                    android:src="@mipmap/transferaccounts" />
+
+                <ImageView
+                    android:id="@+id/rechargeeaccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/recharge" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_recently"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_15"
+                android:text="近期交易记录"
+                android:textColor="#ff444444"
+                android:textSize="13sp" />
+
+            <com.nyzc.gdm.currencyratio.View.MyListView
+                android:id="@+id/recycle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+            </com.nyzc.gdm.currencyratio.View.MyListView>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

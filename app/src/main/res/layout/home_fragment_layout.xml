@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_backgroud">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.zhouwei.mzbanner.MZBannerView
+                android:id="@+id/home_banner_view"
+                android:layout_width="match_parent"
+                android:layout_height="165dp"
+                app:canLoop="true"
+                app:indicatorAlign="right"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:middle_page_cover="false"
+                app:open_mz_mode="false" />
+
+            <android.support.constraint.ConstraintLayout
+
+                android:id="@+id/constrain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_5"
+                android:background="@color/white"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/home_banner_view">
+
+                <TextView
+
+                    android:id="@+id/tv_lastest_forecast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dp_7"
+                    android:drawableTop="@mipmap/icon_lastest"
+                    android:gravity="center"
+                    android:text="最新预测"
+                    android:textColor="#444444"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/tv_hot_forecast"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/tv_hot_forecast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dp_6"
+                    android:drawableTop="@mipmap/icon_hot"
+                    android:gravity="center"
+                    android:text="热门预测"
+                    android:textColor="#444444"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/tv_lastest_forecast"
+                    app:layout_constraintRight_toLeftOf="@+id/tv_topic"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/tv_topic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dp_6"
+                    android:drawableTop="@mipmap/icon_topic"
+                    android:gravity="center"
+                    android:text="币圈专题"
+                    android:textColor="#444444"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/tv_hot_forecast"
+                    app:layout_constraintRight_toLeftOf="@+id/tv_hot"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/tv_hot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dp_6"
+                    android:drawableTop="@mipmap/icon_hot_event"
+                    android:gravity="center"
+                    android:text="热点事件"
+                    android:textColor="#444444"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/tv_topic"
+                    app:layout_constraintRight_toLeftOf="@+id/tv_sport"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/tv_sport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dp_6"
+                    android:drawableTop="@mipmap/icon_sport"
+                    android:gravity="center"
+                    android:text="体育赛事"
+                    android:textColor="#444444"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/tv_hot"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constrain">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_13"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:text="推荐预测"
+                    android:textColor="#ff444444"
+                    android:textSize="13sp" />
+
+                <com.nyzc.gdm.currencyratio.View.MyListView
+                    android:id="@+id/recommend_forecast_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp_13"
+                    android:layout_marginRight="@dimen/dp_13"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:divider="@color/my_backgroud"
+                    android:dividerHeight="@dimen/dp_20">
+
+                </com.nyzc.gdm.currencyratio.View.MyListView>
+
+            </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
+
+
+    </ScrollView>
+
+</android.support.v4.widget.SwipeRefreshLayout>

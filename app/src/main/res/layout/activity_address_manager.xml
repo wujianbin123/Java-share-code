@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".accountPacakage.AddressManagerActivity">
+
+
+    <com.nyzc.gdm.currencyratio.View.CustomTitleBar
+        android:id="@+id/custom_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:left_button_image="@mipmap/icon_left"
+        app:right_button_image="@mipmap/icon_remind"
+        app:show_left_button="true"
+        app:show_right_button="true"
+        app:title_background="@color/white"
+        app:title_text="地址管理" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/custom_title">
+
+    </android.support.v7.widget.RecyclerView>
+</android.support.constraint.ConstraintLayout>
